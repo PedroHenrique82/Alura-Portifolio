@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro | Portfólio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Variáveis de cor e layout */
+    :root {
+      --primary: #4aa3df;
+      --secondary: #e5f4fd;
+      --light-bg: #f3faff;
+      --text-color: #2e2e2e;
+      --hover-color: #348ccb;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+    }
+
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, var(--secondary), #ffffff);
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: var(--shadow);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      color: var(--primary);
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    p.lead {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Seções */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+      color: var(--primary);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* Lista com ícones */
+    .icon-list {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .icon-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .icon-list li:nth-child(1) { animation-delay: 0.4s; }
+    .icon-list li:nth-child(2) { animation-delay: 0.6s; }
+    .icon-list li:nth-child(3) { animation-delay: 0.8s; }
+
+    .icon-list i {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-right: 10px;
+    }
+
+    /* Cartões de projetos */
+    .card {
+      background-color: var(--card-bg);
+      border: none;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .card-img-top:hover {
+      filter: brightness(1.05);
+      transform: scale(1.02);
+    }
+
+    .card-title {
+      color: var(--primary);
+    }
+
+    /* Botões */
+    .btn-primary {
+      background-color: var(--primary);
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--hover-color);
+      transform: scale(1.05);
+    }
+
+    /* Rodapé */
+    .footer-custom {
+      background-color: #f0ebf9;
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 0.95rem;
+      color: #444;
+      border-top: 1px solid #d3cce8;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    .footer-custom h4 {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .contact-link {
+      text-decoration: none;
+      font-size: 1.05rem;
+      color: var(--primary);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--hover-color);
+      transform: translateY(-2px);
+    }
+
+    .footer-custom p {
+      margin-top: 30px;
+      color: #555;
+    }
+
+    /* Animação */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/Pedroo.jfif" alt="Foto do Pedro">
+    <h1>Pedro</h1>
+    <h2>Estudante em formação e futuro psicólogo</h2>
+    <p class="lead">
+      Sou Pedro, estudante dedicado e curioso sobre o comportamento humano. Sonho em me tornar psicólogo para ajudar as pessoas a compreenderem suas emoções, superarem desafios e viverem com mais equilíbrio. Acredito no poder da escuta, da empatia e do autoconhecimento, e busco constantemente aprender mais sobre a mente humana e as relações sociais. Estou construindo meu caminho com disciplina, sensibilidade e o desejo sincero de fazer a diferença na vida das pessoas.
+    </p>
+  </header>
+
+<section>
+  <h3 class="section-title">Habilidades Pessoais</h3>
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="card text-center p-3 border-0 shadow-sm" style="background-color: #e8f6ff;">
+          <div class="mb-3">
+            <i class="bi bi-chat-dots-fill" style="font-size: 2rem; color: var(--primary);"></i>
+          </div>
+          <h5 class="fw-semibold" style="color: var(--primary);">Boa Comunicação</h5>
+          <p class="mb-0">Habilidade em escutar com atenção, interpretar ideias e se expressar com clareza.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3 border-0 shadow-sm" style="background-color: #e8f6ff;">
+          <div class="mb-3">
+            <i class="bi bi-journal-text" style="font-size: 2rem; color: var(--primary);"></i>
+          </div>
+          <h5 class="fw-semibold" style="color: var(--primary);">Interesse Psicológico</h5>
+          <p class="mb-0">Fascínio por comportamento humano, leitura científica e teorias mentais.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3 border-0 shadow-sm" style="background-color: #e8f6ff;">
+          <div class="mb-3">
+            <i class="bi bi-heart-fill" style="font-size: 2rem; color: var(--primary);"></i>
+          </div>
+          <h5 class="fw-semibold" style="color: var(--primary);">Empatia e Sensibilidade</h5>
+          <p class="mb-0">Capacidade de acolher o outro com respeito, escuta afetiva e sensibilidade.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="container">
+    <h3 class="section-title">Meus Projetos</h3>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="card h-100" style="animation-delay: 0.3s;">
+          <img src="img/Olhos.jpg" class="card-img-top" alt="Olhos">
+          <div class="card-body text-center">
+            <h5 class="card-title">Olhos em Movimento</h5>
+            <p class="card-text">Um rosto engraçado cujos olhos seguem o cursor do mouse.</p>
+            <a href="https://editor.p5js.org/PedroHSoares/sketches/WqxslDgK62" target="_blank" class="btn btn-primary btn-sm">Ver projeto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100" style="animation-delay: 0.5s;">
+          <img src="img/Inst.jpg" class="card-img-top" alt="Instagram Pedro">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mais sobre Mim</h5>
+            <p class="card-text">Veja mais sobre mim e minhas conquistas pessoais.</p>
+            <a href="https://www.instagram.com/pedrocaldeirasoares/?hl=pt-br" target="_blank" class="btn btn-primary btn-sm">Ver projeto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-custom">
+    <div class="container">
+      <h4 class="mb-4">Entre em Contato</h4>
+      <div class="d-flex justify-content-center gap-4 flex-wrap">
+        <a href="mailto:Pedro.henrique.caldeira.2009@gmail.com" class="contact-link">
+          <i class="bi bi-envelope-fill"></i> E-mail
+        </a>
+        <a href="https://github.com/PedroHenrique82" target="_blank" class="contact-link">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+      <p class="mt-4 small">&copy; 2025 Todos os Direitos Reservados para Pedro Henrique Caldeira</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
